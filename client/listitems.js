@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 
 
 //var ListItems = React.createClass({})
-const ListItems = ({ items, removeItem, editItem }) => {
+const ListItems = ({ items, removeItem, editItemStart }) => {
   // var that = this;
   // console.log("*** this", this);
 
@@ -15,7 +15,7 @@ const ListItems = ({ items, removeItem, editItem }) => {
         return <li
                   key={index}>{item}
                   <button onClick={() => removeItem(item)}>remove</button>
-                  <button onClick={() => editItem(item)}>edit</button>
+                  <button onClick={() => editItemStart(item)}>edit</button>
               </li>;
       })}
     </ul>

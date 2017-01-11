@@ -9,7 +9,9 @@ class Home extends React.Component {
 	constructor() {
 		super()
 		this.state = {
-			items: []
+			items: [],
+			showEdit: false,
+			wordToEdit: '',
 		}
 	}
 
@@ -28,27 +30,46 @@ class Home extends React.Component {
 		return this.setState({ items: this.state.items })
 	}
 
-	editItem(item) {
+	editItemStart(item) {
 		var i = this.state.items.indexOf(item);
 		if(i !== -1) {
-			return (<EditItemForm />);
+			this.state.showEdit = true;
+			this.state.wordToEdit = item;
+			this.setState({ showEdit: true});
+			this.setState({wordToEdit: item});
 		}
+		console.log("eidtitemstartitem:", item);
+	}
+
+	editItem(item) {
+		console.log("I am here");
+		var i = this.state.items.indexOf(this.state.wordToEdit);
+		if (i !== -1) {
+			this.state.items[i] = item;
+			this.state.wordToEdit = '',
+			this.state.showEdit = false;
+		}
+		return this.setState({ items: this.state.items, wordToEdit: this.state.wordToEdit, showEdit: this.state.showEdit});
 	}
 
 	render() {
-		return <div>
-			<h1>my to-do list</h1>
-			<AddItemForm addItem={this.addItem.bind(this)}/>
-			<ListItems
-				removeItem={this.removeItem.bind(this)}
-				editItem={this.editItem.bind(this)}
-				items={this.state.items}
-			/>
-			<div>
+		if(this.state.showEdit) {
+			return <div><EditItemForm wordToEdit={this.state.wordToEdit} editItem={this.editItem.bind(this)} /> </div>
+		} else {
+			return <div>
+				<h1>my to-do list</h1>
+				<AddItemForm addItem={this.addItem.bind(this)}/>
+				<ListItems
+					removeItem={this.removeItem.bind(this)}
+					editItemStart={this.editItemStart.bind(this)}
+					items={this.state.items}
+				/>
+				<div>
 
-			</div>
+				</div>
 
-		</div>;
+			</div>;
+		}
 	}
 }
 
