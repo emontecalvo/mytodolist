@@ -15,14 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Rosuav/full-stack-app.git"
+    "url": "git+https://github.com/emontecalvo/mytodolist.git"
   },
-  "author": "Chris Angelico (cangelico@thinkful.com)",
+  "author": "Emily Monte Calvo",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Rosuav/full-stack-app/issues"
+    "url": "https://github.com/emontecalvo/mytodolist"
   },
-  "homepage": "https://github.com/Rosuav/full-stack-app#readme",
+  "homepage": "https://github.com/emontecalvo/mytodolist#readme",
   "dependencies": {
     "babel-cli": "^6.18.0",
     "babel-core": "^6.18.2",
