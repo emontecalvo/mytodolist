@@ -4,8 +4,6 @@ import {connect} from 'react-redux';
 
 const AddItemForm = ({addItem}) => {
 
-
-
 		return(
 			 <div>
     <form
@@ -29,6 +27,27 @@ const AddItemForm = ({addItem}) => {
 }
 
 module.exports = AddItemForm;
+
+
+// var ListItems = React.createClass({
+//   render: function() {
+//     var that = this
+//     return (
+//       <ul>
+//       {items.map((item, index) => {
+//         console.log("THAT IS:", that);
+//         return <li key={index}>{item} <button onClick={() => that.props.removeItem(item)}>remove</button></li>;
+//       })}
+//     </ul>
+//       )
+//   }
+// })
+
+
+
+
+
+
 
 
 			 	// <form onSubmit={(e) => {
