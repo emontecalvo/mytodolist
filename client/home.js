@@ -17,7 +17,6 @@ class Home extends React.Component {
 
 	addItem(item) {
 		this.state.items.push(item);
-		console.log('after add state is now:', this.state.items);
 		return this.setState({ items: this.state.items })
 	}
 
@@ -26,7 +25,6 @@ class Home extends React.Component {
 		if(i !== -1) {
 			this.state.items.splice(i, 1);
 		}
-		console.log('after delete state is now:', this.state.items);
 		return this.setState({ items: this.state.items })
 	}
 
@@ -38,11 +36,9 @@ class Home extends React.Component {
 			this.setState({ showEdit: true});
 			this.setState({wordToEdit: item});
 		}
-		console.log("eidtitemstartitem:", item);
 	}
 
 	editItem(item) {
-		console.log("I am here");
 		var i = this.state.items.indexOf(this.state.wordToEdit);
 		if (i !== -1) {
 			this.state.items[i] = item;
