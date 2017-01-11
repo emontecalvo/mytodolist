@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import MainComponent from './main-component';
 import Home from './Home';
 import store from './store';
 import {Provider} from 'react-redux';

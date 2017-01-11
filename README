@@ -1,5 +1,7 @@
 Basic full-stack JavaScript app template
 
+To install: npm install
+
 To build: npm run build
 
 To start the server: npm run start
