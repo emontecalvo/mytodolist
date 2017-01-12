@@ -4,11 +4,7 @@ import {connect} from 'react-redux';
 
 //var ListItems = React.createClass({})
 const ListItems = ({ items, removeItem, editItemStart }) => {
-  // var that = this;
-  // console.log("*** this", this);
 
-
-  console.log(items);
   return (
     <ul>
       {items.map((item, index) => {

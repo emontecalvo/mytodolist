@@ -60,10 +60,6 @@ class Home extends React.Component {
 					editItemStart={this.editItemStart.bind(this)}
 					items={this.state.items}
 				/>
-				<div>
-
-				</div>
-
 			</div>;
 		}
 	}

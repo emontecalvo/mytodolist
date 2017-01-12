@@ -3,7 +3,6 @@ import {connect} from 'react-redux';
 
 
 const editItemForm = ({wordToEdit, editItem}) => {
-  console.log(wordToEdit);
 
     return(
        <div>
@@ -16,7 +15,7 @@ const editItemForm = ({wordToEdit, editItem}) => {
       }}
     >
 
-      <input type="text" placeholder={wordToEdit} name="userInput" />
+      <input type="text" defaultValue={wordToEdit} name="userInput" />
 
     <button type="submit">
       Save Edit
